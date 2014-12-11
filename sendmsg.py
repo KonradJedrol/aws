@@ -1,4 +1,4 @@
-# This script created a queue
+# This script creates a message
 #
 # Author - Paul Doyle Aug 2013
 #
@@ -13,4 +13,6 @@ conn = boto.sqs.connect_to_region("us-east-1", aws_access_key_id='AKIAIR7EH3TNST
 
 conn2 = boto.sqs.connect_to_region("eu-west-1", aws_access_key_id='AKIAIR7EH3TNSTDUCWKA', aws_secret_access_key='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')
 
-NewQueue = conn2.create_queue("WhoUploadedTheKey(Again)?")
+Queue = conn2.get_queue("Such_queue_much_AWS")
+
+conn.send_message(Queue, "Wow.")
