@@ -1,4 +1,4 @@
-# This script creates a message
+# This script creates many messages
 #
 # Author - Paul Doyle Aug 2013
 #
